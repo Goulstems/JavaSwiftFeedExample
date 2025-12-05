@@ -1,5 +1,5 @@
 public class Weapon {
-    private String name;
+    public String name;
     private int damage;
     private String type;
 
@@ -12,5 +12,9 @@ public class Weapon {
     public void attack(Player otherPlayer) {
         // Alter otherPlayer.health BASED ON this.damage
         otherPlayer.setHealth(otherPlayer.getHealth() - this.damage);
+        // if otherPlayer.health == 0 {
+        // otherPlayer has died!
+        // TODO: death message, points, KO's, other leaderstats!
+        // }
     }
 }

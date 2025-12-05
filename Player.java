@@ -11,7 +11,10 @@ public class Player {
     }
 
     public void attack(Player otherPlayer) {
-        System.out.println(this.weapon);
+        if (this.weapon != null) {
+            this.weapon.attack(otherPlayer); // Call Weapon's attack method. && Output log to console.
+            System.out.println(this.name + " attacked " + otherPlayer.name + " with " + this.weapon.name);
+        }
     }
 
     public int getHealth() {
